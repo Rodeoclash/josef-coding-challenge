@@ -13,7 +13,7 @@ const checkCurrentGroup = (ruleGroup, checkUsersAnswers) => {
   }
 
   if (ruleGroup.logic === OP.ANY) {
-    return fp.some(checkUsersAnswers, ruleGroup.rules)
+    return fp.some(checkUsersAnswers)(ruleGroup.rules)
   }
 }
 
