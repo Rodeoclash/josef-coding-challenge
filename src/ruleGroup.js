@@ -17,6 +17,9 @@ const checkCurrentGroup = (ruleGroup, checkUsersAnswers) => {
   }
 }
 
+/**
+ * Checks the current groups rules and will recurse into any child rule groups if present.
+ */
 const checkGroupMaybeNested = (ruleGroup, checkUsersAnswers) => {
   const currentGroupPasses = checkCurrentGroup(ruleGroup, checkUsersAnswers)
 
